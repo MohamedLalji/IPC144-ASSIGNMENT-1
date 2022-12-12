@@ -1,0 +1,6 @@
+﻿  a1ms3.c
+  clinic.c
+  core.c
+C:\Users\mlalj\Desktop\SENECA - CPA\CPA - SEMESTER 1\IPC144\IPC-Workshops-master\ASSIGNMENT 1\MILESTONE 3\core.c(264,14): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  Generating Code...
+  a1ms3.vcxproj -> C:\Users\mlalj\Desktop\SENECA - CPA\CPA - SEMESTER 1\IPC144\IPC-Workshops-master\ASSIGNMENT 1\MILESTONE 3\x64\Debug\a1ms3.exe

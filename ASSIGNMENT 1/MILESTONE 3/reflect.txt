@@ -1,0 +1,48 @@
+/*
+*****************************************************************************
+                        Assignment 1 - Milestone 3
+Full Name  : Mohamed Lalji
+Student ID#: 168219229
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+*/
+
+1. Creating these functions from scratch was a real challenge but since the IPC NOTES provided have it all cleared out and the book “A MODERN APPROACH” by K.N. KING has it all cleared out it was a lot less challenging. I used the examples from both the book and the IPC NOTES to create these functions. 
+
+Prototype:
+int timeSlotAvailable(struct Date date, struct Time time, struct Appointment* app, int maxAppointments);
+	The first function that I created was used to check whether the time slot of requested appointment is available.
+
+Prototype:
+int nextSlotAvailable(struct Appointment* app, int maxAppointments);
+	The next function that I created was to check whether a slot is available i.e. whether the system can take another appointment based on whether the patient number is less than 1. So when adding a new appointment, the structure will validate and if it returns ‘1’ then the new patient can be accommodated otherwise if it returns ‘0’ then  a new patient cannot be accommodated.
+
+Prototype:
+int validAppointment(int patientNumber, struct Date date, struct Appointment* app, int maxAppointments);
+	The third function that I created was to check whether such an appointment exists and to validate it when deleting the appointment or editing it. If the appointment doesn’t exist then it will throw an error. 
+
+
+
+2. I used about 87 lines of code for the addAppointment and this was by far the most difficult function definition because of the number of functions and pointers I had to use to call the other functions that were used to validate the user’s input. 
+The main reason why I used so many lines is because I had to call so many different functions and had about 5 validation conditions. I had to validate even the patient number, assuming the user may enter a patient number that doesn’t exist. 
+Another validation that was also needed was to make sure that there is no overlap i.e. 2 bookings at the same time and date. The remaining three validations were to do with finding the number of days that are there in that month.
+These were needed because they help in validating the user input in a way that it will display the last number based on the month that the user previously entered. Validating this was the easiest part of this function definition. 
+The following are the functions that I called and as a result saved a lot of lines and time validating it again and again as we did in the previous workshops: inputIntPositive, findPatientIndexByPatientNum, inputIntRange and timeSlotAvailable.
+
+
+
+3. The main challenges that I faced in this milestone were to do with the MS1 and MS2 both which weren’t perfect and needed a lot of modification. 
+MS1 was fine just that the prototypes weren’t quite matching with the MS2 ones and that lead to a lot of confusion and took me almost 2 days (10 hours)  to fix both MS1 and MS2. 
+I only started working on MS3 about 3 days before deadline and spent more than 24+ hours in total for MS3. The fact that the instructions for MS3 were quite vague, required extensive research and understanding the output as well as a lot of guessing/ try and error which eventually lead to the required output on Sunday. 
+I did follow the instructions provided in the document for MS3 and started by defining the macros and declaring the prototypes in clinic.h. 
+I then moved to the clinic.c where I now defined these prototypes but since I was just starting, I left them empty and temporarily hardcoded some just to make sure I have no errors. 
+I then started to work on the first major function after the two minor ones: viewAllAppointments and viewAppointmentSchedule.  Then came addAppointment which was a mess mainly because of the pointers and functions. 
+I spent hours reading through the book ‘A MODERN APPROACH’ by K.N. KING. I would say, without this book and the simplicity of its explanation, I would never have finished any of the workshops nor assignment milestones. 
+If my MS1 and MS2 worked well beforehand, it would’ve been a lot easier to do MS3 because it was all linked together. Another major challenge I faced was going through the provided codes. 
+This took me a lot of time because I had to navigate the prototypes to their definitions and the structures and the macros. In total I spent at least 40 hours to get done with MS3.
+Opening and closing the files required me to go through a whole topic as well, and this took another hour to get done with. 
+
